@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 5 - Form Search Results</title>
+    <link rel="stylesheet" href="css/search-style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="site-nav" aria-label="Site">
+        <a href="Proj1.html">Home</a>
+      </nav>
+      <form
+        method="GET"
+        action="https://www.randyconnolly.com/tests/process.php"
+      >
+        <!-- Search Panel -->
+        <section class="panel">
+          <header class="panel-header">
+            <h2>Advanced Art Work Search</h2>
+          </header>
+          <div class="panel-body">
+            <!-- Filter Row -->
+            <div class="form-row filter-row">
+              <input
+                type="text"
+                name="search"
+                placeholder="Search Titles"
+                class="input-search"
+              />
+
+              <div class="radio-group">
+                <span class="group-label">Subject</span>
+                <label
+                  ><input type="radio" name="subject" value="1" checked />
+                  History</label
+                >
+                <label
+                  ><input type="radio" name="subject" value="2" /> Person</label
+                >
+                <label
+                  ><input type="radio" name="subject" value="3" />
+                  Landscape</label
+                >
+              </div>
+
+              <select name="filter" class="select-control">
+                <option value="0" selected disabled>Select Genre</option>
+                <option value="1">Baroque</option>
+                <option value="2">Renaissance</option>
+                <option value="3">Realism</option>
+                <option value="4">Dutch Golden Age</option>
+              </select>
+
+              <button type="button" class="btn btn-teal">Filter</button>
+            </div>
+
+            <!-- Actions Row -->
+            <div class="form-row actions-row">
+              <select name="actions" class="select-control">
+                <option value="0" selected>Bulk Actions</option>
+                <option value="1">Archive</option>
+                <option value="2">Edit</option>
+                <option value="3">Delete</option>
+                <option value="4">Collection</option>
+              </select>
+
+              <button type="button" class="btn btn-teal">Apply To All</button>
+              <button type="submit" class="btn btn-teal">Search</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Paintings Panel -->
+        <section class="panel">
+          <header class="panel-header">
+            <h2>Paintings</h2>
+          </header>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th class="col-check"></th>
+                  <th class="col-img"></th>
+                  <th>Title</th>
+                  <th>Artist</th>
+                  <th>Year</th>
+                  <th>Genre</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" name="index[]" value="10" /></td>
+                  <td class="img-cell">
+                    <img src="images/rijks1.jpg" alt="Painting" />
+                  </td>
+                  <td class="title-cell">Portrait of Alida Christina Assink</td>
+                  <td>Jan Adam Kruseman</td>
+                  <td>1833</td>
+                  <td>Realim</td>
+                  <td class="actions-cell">
+                    <button type="button" class="btn-icon edit" title="Edit">
+                      <img src="images/edit.png" alt="Edit" />
+                    </button>
+                    <button type="button" class="btn-icon view" title="View">
+                      <img src="images/view.png" alt="View" />
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-icon delete"
+                      title="Delete"
+                    >
+                      <img src="images/delete.png" alt="Delete" />
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="index[]" value="20" /></td>
+                  <td class="img-cell">
+                    <img src="images/rijks2.jpg" alt="Painting" />
+                  </td>
+                  <td class="title-cell">
+                    Portrait of Willem II, King of the Netherland
+                  </td>
+                  <td>Jan Adam Kruseman</td>
+                  <td>1839</td>
+                  <td>Realim</td>
+                  <td class="actions-cell">
+                    <button type="button" class="btn-icon edit" title="Edit">
+                      <img src="images/edit.png" alt="Edit" />
+                    </button>
+                    <button type="button" class="btn-icon view" title="View">
+                      <img src="images/view.png" alt="View" />
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-icon delete"
+                      title="Delete"
+                    >
+                      <img src="images/delete.png" alt="Delete" />
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="index[]" value="30" /></td>
+                  <td class="img-cell">
+                    <img src="images/louvre1.jpg" alt="Painting" />
+                  </td>
+                  <td class="title-cell">
+                    Two girls from the Amsterdam Orphanage
+                  </td>
+                  <td>Gotthardt Kuehl</td>
+                  <td>1898</td>
+                  <td>Realim</td>
+                  <td class="actions-cell">
+                    <button type="button" class="btn-icon edit" title="Edit">
+                      <img src="images/edit.png" alt="Edit" />
+                    </button>
+                    <button type="button" class="btn-icon view" title="View">
+                      <img src="images/view.png" alt="View" />
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-icon delete"
+                      title="Delete"
+                    >
+                      <img src="images/delete.png" alt="Delete" />
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="index[]" value="40" /></td>
+                  <td class="img-cell">
+                    <img src="images/louvre2.jpg" alt="Painting" />
+                  </td>
+                  <td class="title-cell">The Windmill at Wijk bij Duurstede</td>
+                  <td>Jacob van Ruisdael</td>
+                  <td>1670</td>
+                  <td>Dutch Golden Age</td>
+                  <td class="actions-cell">
+                    <button type="button" class="btn-icon edit" title="Edit">
+                      <img src="images/edit.png" alt="Edit" />
+                    </button>
+                    <button type="button" class="btn-icon view" title="View">
+                      <img src="images/view.png" alt="View" />
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-icon delete"
+                      title="Delete"
+                    >
+                      <img src="images/delete.png" alt="Delete" />
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="index[]" value="50" /></td>
+                  <td class="img-cell">
+                    <img src="images/getty1.jpg" alt="Painting" />
+                  </td>
+                  <td class="title-cell">Morning Ride Along the Beach</td>
+                  <td>Anton Mauve</td>
+                  <td>1876</td>
+                  <td>Renaissance</td>
+                  <td class="actions-cell">
+                    <button type="button" class="btn-icon edit" title="Edit">
+                      <img src="images/edit.png" alt="Edit" />
+                    </button>
+                    <button type="button" class="btn-icon view" title="View">
+                      <img src="images/view.png" alt="View" />
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-icon delete"
+                      title="Delete"
+                    >
+                      <img src="images/delete.png" alt="Delete" />
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </form>
+    </div>
+  </body>
+</html>

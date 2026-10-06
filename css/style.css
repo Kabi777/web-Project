@@ -1,0 +1,96 @@
+
+@import url("variables-palette-7.css");
+
+body {
+  margin :0px;
+  padding:0px;
+  text-align: center;
+}
+
+header {
+  background-image: url('../images/gallery-header.jpg');
+  background-size:cover;
+  background-position:center;
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+}
+
+header > img {
+  display: none;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  width: 60px;
+  height: 60px;
+
+  background-image: url('../images/logo.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
+
+a {
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+}
+
+a img {
+  width: 200px;
+  padding: 5px;
+  border-radius: 8px;
+
+  background-image: url('../images/heart.png'); 
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+a img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* Search icon link to the test search page */
+.search-link {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.search-link a {
+  display: inline-block;
+  margin: 0;
+  padding: 10px;
+  line-height: 0;
+  background-color: var(--color-primary-1-600);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.search-link a:hover {
+  background-color: var(--color-primary-1-800);
+  transform: scale(1.08);
+}
+
+.search-link img {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 0;
+  background-image: none;
+  transition: transform 0.2s ease;
+}
+
+.search-link img:hover {
+  transform: scale(1.1);
+}
+
